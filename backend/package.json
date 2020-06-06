@@ -4,10 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node-dev src/server.ts",
+        "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
         "test": "echo \"Error: no test specified\" && exit 1",
         "knex:seed": "knex --knexfile knexfile.ts seed:run",
-        "knex:migrate": "knex migrate:lastest --knexfile knexfile.ts migrate:lastest"
+        "knex:migrate": "knex --knexfile knexfile.ts migrate:lastest"
     },
     "keywords": [],
     "author": "",
